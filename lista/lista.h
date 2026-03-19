@@ -6,6 +6,7 @@
 typedef struct {
     Nodo* head;
     Nodo* tail;
+    Nodo* len;
 } Lista;
 
 Lista* lista_crear();

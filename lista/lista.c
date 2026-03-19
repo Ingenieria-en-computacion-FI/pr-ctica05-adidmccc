@@ -9,12 +9,16 @@ Lista* lista_crear()
     if (l != NULL){
         l -> head = NULL;
         l -> tail = NULL;
-    } l -> len =0;
+    } 
 }
 
 int lista_vacia(Lista* lista)
 {
-    
+    l = (lista *)malloc(sizeof(lista));
+    l -> head = -1;
+    l -> tail = -1;
+    l -> len = -1;
+    return l;
 }
 
 void lista_insertar_head(Lista* lista, int dato)

@@ -41,9 +41,9 @@ void lista_insertar_tail(Lista* lista, int dato)
 }
 
 int lista_eliminar_head(Lista* lista){
-    if(lista_vacia(lista){
+    if(lista_vacia(lista)
         return -1;
-}
+    
     Nodo *temp = lista -> head;
     int dato = temp -> dato;
 }
@@ -74,6 +74,14 @@ if(lista -> head = lista tail){
 }
 while (actual -> siguiente != lista -> tail){
     actual -> actual -> siguiente;
+    
+}
+    Nodo *temp = lista -> tail;
+    int dato = temp -> dato;
+    actual -> siguiente = NULL;
+    lista -> tail = actual;
+
+    return dato;
 }
 
 void lista_imprimir(Lista* lista)

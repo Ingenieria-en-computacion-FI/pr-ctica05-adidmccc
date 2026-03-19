@@ -1,52 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "lista.h"
 
 Lista* lista_crear()
 {
     lista *l = NULL;
     l = (lista *)malloc(sizeof(lista));
-    if (l != NULL){
         l -> head = NULL;
         l -> tail = NULL;
-    } 
 }
 
-int lista_vacia(Lista* lista)
+bool lista_vacia(Lista* lista)
 {
-    l = (lista *)malloc(sizeof(lista));
-    l -> head = -1;
-    l -> tail = -1;
-    l -> len = -1;
-    return l;
+return lista -> head == NULL;
 }
 
 void lista_insertar_head(Lista* lista, int dato)
 {
-    /*
-    TODO:
-
-    1 Crear nuevo nodo
-    2 Si lista está vacía:
-        head y tail apuntan al nuevo nodo
-    3 Si no:
-        head apunta al nuevo nodo
-        actualizar tail
-    */
+Nodo *newNode = CrearNodo(e);
+    if(lista_vacia(lista)){
+        l -> head = newNode;
+        l -> tail = newNode;
+    } else if {
+        newNode -> siguiente = lista -> head;
+        l -> head; 
+    }
 }
 
 void lista_insertar_tail(Lista* lista, int dato)
 {
-    /*
-    TODO:
-
-    1 Crear nuevo nodo
-    2 Si lista está vacía:
-        head y tail apuntan al nuevo nodo
-    3 Si no:
-        tail->siguiente apunta al nuevo nodo
-        actualizar tail
-    */
+    Nodo *newNode = CrearNodo(e);
+    if(lista_vacia(lista)){
+        l -> head = newNode;
+        l -> tail = newNode;
+    } else if {
+       lista -> tail -> siguiente = newNode;
+        lista -> taio _ newNode;
+    }
 }
 
 int lista_eliminar_head(Lista* lista){
@@ -68,7 +59,11 @@ if(lista_vacia(lista)){
     lista -> head = NULL;
     lista -> tail = NULL;
     return dato;
+    
 }
+nodo_destruir(temp);
+return dato;
+
 Nodo* actual = lista -> head;
 if(lista -> head = lista tail){
     int dato = actual -> dato;
@@ -76,6 +71,9 @@ if(lista -> head = lista tail){
     lista -> head = NULL;
     lista -> tail = NULL;
     return dato;
+}
+while (actual -> siguiente != lista -> tail){
+    actual -> actual -> siguiente;
 }
 
 void lista_imprimir(Lista* lista)
@@ -93,11 +91,7 @@ void lista_imprimir(Lista* lista)
 
 void lista_destruir(Lista* lista)
 {
-    /*
-    TODO:
-
-    1 si la lista no esta vacia
-    2 borrar el primero o el último 
-    3 hacer que lista apunte a nulo
-    */
+   while ( != lista_vacia(lista)){
+       lista_eliminar_head(lista);
+   } free (lista);
 }

@@ -49,42 +49,33 @@ void lista_insertar_tail(Lista* lista, int dato)
     */
 }
 
-int lista_eliminar_head(Lista* lista)
-{
-    /*
-    TODO:
-
-    1 Si lista vacía regresar error (-1)
-    2 Guardar nodo a eliminar
-    3 Mover head al siguiente nodo
-    4 Si lista queda vacía:
-       tail = NULL
-    5 Liberar nodo
-    6 Regresar dato eliminado
-    */
-
-    return -1;
+int lista_eliminar_head(Lista* lista){
+    if(lista_vacia(lista){
+        return -1;
 }
+    Nodo *temp = lista -> head;
+    int dato = temp -> dato;
+}
+
+
+
 
 int lista_eliminar_tail(Lista* lista)
 {
-    /*
-    TODO:
-
-    1 Si lista vacía regresar error
-    2 Si solo hay un nodo:
-        guardar dato
-        liberar nodo
-        head = NULL
-        tail = NULL
-    3 Si hay varios nodos:
-        recorrer lista hasta el nodo anterior al tail
-    4 actualizar tail
-    5 liberar nodo eliminado
-    6 regresar dato
-    */
-
-    return -1;
+if(lista_vacia(lista)){
+    int dato = actuial -> dato;
+    nodo_destruir(actual);
+    lista -> head = NULL;
+    lista -> tail = NULL;
+    return dato;
+}
+Nodo* actual = lista -> head;
+if(lista -> head = lista tail){
+    int dato = actual -> dato;
+    nodo_destruir(actual);
+    lista -> head = NULL;
+    lista -> tail = NULL;
+    return dato;
 }
 
 void lista_imprimir(Lista* lista)
